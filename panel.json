@@ -1,0 +1,132 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "translate": "manhunt.ui.panel.title",
+    "fallback": "Manhunt",
+    "color": "gold",
+    "bold": true
+  },
+  "external_title": {
+    "translate": "manhunt.ui.panel.title",
+    "fallback": "Manhunt"
+  },
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "translate": "manhunt.ui.panel.body",
+        "fallback": "Operator controls. Hover a button for what it does.",
+        "color": "gray"
+      }
+    }
+  ],
+  "columns": 2,
+  "button_width": 150,
+  "actions": [
+    {
+      "label": {
+        "translate": "manhunt.ui.start",
+        "fallback": "Start match",
+        "color": "green"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "function manhunt:admin/action/start"
+      },
+      "tooltip": {
+        "translate": "manhunt.ui.start.tip",
+        "fallback": "Needs at least one runner and one hunter, both online."
+      }
+    },
+    {
+      "label": {
+        "translate": "manhunt.ui.roles",
+        "fallback": "Roles",
+        "color": "white"
+      },
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "manhunt:roles"
+      },
+      "tooltip": {
+        "translate": "manhunt.ui.roles.tip",
+        "fallback": "Assign who runs and who hunts. Start here."
+      }
+    },
+    {
+      "label": {
+        "translate": "manhunt.ui.settings",
+        "fallback": "Settings",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "function manhunt:admin/config/menu"
+      },
+      "tooltip": {
+        "translate": "manhunt.ui.settings.tip",
+        "fallback": "Head start, lives, lobby, tracking. Settings survive a reload."
+      }
+    },
+    {
+      "label": {
+        "translate": "manhunt.ui.status",
+        "fallback": "Status",
+        "color": "gray"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "function manhunt:admin/status"
+      },
+      "tooltip": {
+        "translate": "manhunt.ui.status.tip",
+        "fallback": "Prints phase, timers and outcome to chat."
+      }
+    },
+    {
+      "label": {
+        "translate": "manhunt.ui.forceend",
+        "fallback": "Force end",
+        "color": "yellow"
+      },
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "manhunt:confirm_force_end"
+      },
+      "tooltip": {
+        "translate": "manhunt.ui.forceend.tip",
+        "fallback": "Ends the match with no winner. Everything the pack changed is put back."
+      }
+    },
+    {
+      "label": {
+        "translate": "manhunt.ui.reset",
+        "fallback": "Rematch reset",
+        "color": "aqua"
+      },
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "manhunt:confirm_reset"
+      },
+      "tooltip": {
+        "translate": "manhunt.ui.reset.tip",
+        "fallback": "Clears the match, keeps the teams. Eliminated players return to their side."
+      }
+    },
+    {
+      "label": {
+        "translate": "manhunt.ui.fullreset",
+        "fallback": "Full reset",
+        "color": "red"
+      },
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "manhunt:confirm_full_reset"
+      },
+      "tooltip": {
+        "translate": "manhunt.ui.fullreset.tip",
+        "fallback": "Clears the match and every role. Settings are kept."
+      }
+    }
+  ]
+}
