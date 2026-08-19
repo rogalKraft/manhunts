@@ -1,0 +1,3 @@
+# admin/status — what is going on right now (FR-9.6).
+tellraw @s [{"text":"[Manhunt] ","color":"green"},{"text":"phase=","color":"gray"},{"nbt":"phase","storage":"manhunt:state","color":"white"},{"text":"  prep_remaining=","color":"gray"},{"nbt":"prep_remaining","storage":"manhunt:state","color":"white"}]
+tellraw @s [{"text":"          ","color":"gray"},{"text":"outcome=","color":"gray"},{"nbt":"outcome.winner","storage":"manhunt:state","color":"white"},{"text":"/","color":"gray"},{"nbt":"outcome.reason","storage":"manhunt:state","color":"white"},{"text":"  duration=","color":"gray"},{"nbt":"outcome.duration","storage":"manhunt:state","color":"white"}]
