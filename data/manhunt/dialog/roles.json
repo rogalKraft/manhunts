@@ -1,0 +1,94 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "translate": "manhunt.ui.roles.title",
+    "fallback": "Roles",
+    "color": "gold",
+    "bold": true
+  },
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "translate": "manhunt.ui.roles.body",
+        "fallback": "Runners try to kill the dragon. Hunters try to kill them.",
+        "color": "gray"
+      }
+    }
+  ],
+  "columns": 1,
+  "button_width": 240,
+  "actions": [
+    {
+      "label": {
+        "translate": "manhunt.ui.roles.allhunters",
+        "fallback": "Everyone unassigned to hunter",
+        "color": "red"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "function manhunt:admin/action/assign_all_hunters"
+      },
+      "tooltip": {
+        "translate": "manhunt.ui.roles.allhunters.tip",
+        "fallback": "Usual first step: press this, then pick a random runner."
+      }
+    },
+    {
+      "label": {
+        "translate": "manhunt.ui.roles.random",
+        "fallback": "Pick a random runner",
+        "color": "green"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "function manhunt:admin/action/assign_random_runner"
+      },
+      "tooltip": {
+        "translate": "manhunt.ui.roles.random.tip",
+        "fallback": "The previous runner stays a runner — clear roles first for a clean draw."
+      }
+    },
+    {
+      "label": {
+        "translate": "manhunt.ui.roles.show",
+        "fallback": "Show current roles",
+        "color": "white"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "function manhunt:admin/roles"
+      },
+      "tooltip": {
+        "translate": "manhunt.ui.roles.show.tip",
+        "fallback": "Lists who is on which side, in chat."
+      }
+    },
+    {
+      "label": {
+        "translate": "manhunt.ui.roles.clear",
+        "fallback": "Clear all roles",
+        "color": "yellow"
+      },
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "function manhunt:admin/action/clear_roles"
+      },
+      "tooltip": {
+        "translate": "manhunt.ui.roles.clear.tip",
+        "fallback": "Everyone becomes unassigned and leaves spectator mode."
+      }
+    },
+    {
+      "label": {
+        "translate": "manhunt.ui.cancel",
+        "fallback": "Cancel",
+        "color": "gray"
+      },
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "manhunt:panel"
+      }
+    }
+  ]
+}

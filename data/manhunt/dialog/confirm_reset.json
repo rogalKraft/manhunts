@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:confirmation",
+  "title": {
+    "translate": "manhunt.ui.ask.reset",
+    "fallback": "Reset for a rematch?"
+  },
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "translate": "manhunt.ui.ask.reset.body",
+        "fallback": "Clears the match. Teams are kept.",
+        "color": "gray"
+      }
+    }
+  ],
+  "yes": {
+    "label": {
+      "translate": "manhunt.ui.reset",
+      "fallback": "Rematch reset",
+      "color": "aqua"
+    },
+    "action": {
+      "type": "minecraft:run_command",
+      "command": "function manhunt:admin/action/reset"
+    }
+  },
+  "no": {
+    "label": {
+      "translate": "manhunt.ui.cancel",
+      "fallback": "Cancel"
+    }
+  }
+}
